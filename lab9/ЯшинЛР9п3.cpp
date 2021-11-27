@@ -8,7 +8,7 @@ int main()
     cin>>n;
     cout<<"\nвведите y";
     cin>>y;
-    answ=(n+y-1)%7;
+    answ=(n+y)%7;
     switch(answ){
         case 1:
         cout<<"Выбранный день= понедельник";
