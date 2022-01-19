@@ -5,68 +5,28 @@ using namespace std;
 int main()
 {
 
-    int x;
+    int x,d;
     char y;
-    cout<<"Введите направление:";
+    char a[4]{'S','Z','U','V'};
+    cout<<"Введите направление в котором робот смотрит сейчас, S,Z,U,V:\n";//0.1.2.3
     cin>>y;
-    cout<<"Введите команду:";
+    cout<<"Введите команду, 1 налево, 0 сохарнять направление, -1 направо:\n";
     cin>>x;
-
     switch (y) {
     case 'S':
-        switch (x) {
-        case 1:
-            y = 'Z';
-            break;
-        case 0:
-            y = 'S';
-            break;
-        case -1:
-            y = 'V';
-            break;
-        }
-        break;
-    case 'V':
-        switch (x) {
-        case 1:
-           y = 'S';
-            break;
-        case 0:
-            y = 'V';
-            break;
-        case -1:
-            y = 'U';
-            break;
-        }
-    case 'U':
-        switch (x) {
-        case 1:
-            y = 'V';
-            break;
-        case 0:
-            y = 'U';
-            break;
-        case -1:
-            y = 'Z';
-            break;
-        }
-        break;
+        d=0;
+    break;
     case 'Z':
-        switch (x) {
-        case 1:
-            y = 'U';
-            break;
-        case 0:
-            y = 'Z';
-            break;
-        case -1:
-            y = 'S';
-            break;
-        }
+        d=1;
+    break;
+    case 'U':
+        d=2;    
+    break;
+    case 'V':
+        d=3;    
+    break;
     }
-
-    cout<<y;
-
-
+    d=(4+d+x)%4;
+    cout<<a[d];
     return 0;
 }
