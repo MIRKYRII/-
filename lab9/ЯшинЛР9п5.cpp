@@ -1,17 +1,11 @@
 #include <iostream>
-
 using namespace std;
-int year,centery,n;
+int year=0,answ=0;
 int main()
 {
-    cout<<"ЛР9п5. Введите год.";
+    cout<<"ЛР9п5 Введите год, программа определит столетие";
     cin>>year;
-    n=year%100;
-    centery=year/100;
-    if (n>0){
-        centery++;
-    }
-    cout<<"Введённый год в "<<centery<<" веке";
-    
+    answ=1+year/100;
+    cout<<"Указанный год в "<<answ<<"ом столетии";
     return 0;
 }
